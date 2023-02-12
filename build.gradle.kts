@@ -1,11 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "2.6.3"
-    id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    id("org.jlleitschuh.gradle.ktlint") version "10.0.0"
+    id("org.springframework.boot") version "2.7.8"
+    id("io.spring.dependency-management") version "1.1.0"
+    id("org.jmailen.kotlinter") version "3.13.0"
 
-    val kotlinVersion = "1.6.10"
+    val kotlinVersion = "1.7.21"
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.spring") version kotlinVersion
     kotlin("plugin.jpa") version kotlinVersion
@@ -14,7 +14,7 @@ plugins {
 
 group = "com.yebali"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_11
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenCentral()
@@ -40,13 +40,7 @@ dependencies {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "11"
-    }
-}
-
-ktlint {
-    reporters {
-        reporter(org.jlleitschuh.gradle.ktlint.reporter.ReporterType.JSON)
+        jvmTarget = "17"
     }
 }
 
