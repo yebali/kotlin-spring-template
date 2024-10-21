@@ -9,3 +9,8 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: create
+
+# actuator
+management:
+  server:
+    port: 8081
