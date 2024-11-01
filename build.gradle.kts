@@ -57,6 +57,10 @@ kotlin {
     }
 }
 
+configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+    version.set("0.49.1")
+}
+
 allOpen {
     annotation("javax.persistence.Entity")
     annotation("javax.persistence.Embeddable")
