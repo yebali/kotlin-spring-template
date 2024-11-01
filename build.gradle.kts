@@ -1,7 +1,7 @@
 plugins {
     id("org.springframework.boot") version "3.3.4"
     id("io.spring.dependency-management") version "1.1.6"
-    id("org.jmailen.kotlinter") version "4.4.1"
+    id("org.jlleitschuh.gradle.ktlint") version "12.1.1"
 
     val kotlinVersion = "1.9.25"
     kotlin("jvm") version kotlinVersion
@@ -43,8 +43,8 @@ dependencies {
 
     // Coroutine
     val coroutineVersion = "1.9.0"
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutineVersion}")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:${coroutineVersion}")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:$coroutineVersion")
 
     /** Test **/
     testImplementation("org.springframework.boot:spring-boot-starter-test")
