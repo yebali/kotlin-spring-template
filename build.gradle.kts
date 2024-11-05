@@ -30,6 +30,9 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
+    // Logger
+    implementation("io.github.microutils:kotlin-logging:3.0.5")
+
     // Postgresql
     runtimeOnly("org.postgresql:postgresql")
 
