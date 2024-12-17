@@ -1,5 +1,5 @@
 plugins {
-    id("org.springframework.boot") version "3.3.4"
+    id("org.springframework.boot") version "3.4.0"
     id("io.spring.dependency-management") version "1.1.6"
     id("org.jlleitschuh.gradle.ktlint") version "12.1.1"
 
@@ -37,7 +37,7 @@ dependencies {
     runtimeOnly("org.postgresql:postgresql")
 
     // QueryDSL
-    val querydslVersion = "5.0.0"
+    val querydslVersion = "5.1.0"
     implementation("com.querydsl:querydsl-jpa:$querydslVersion:jakarta")
     kapt("com.querydsl:querydsl-apt:$querydslVersion:jakarta")
 

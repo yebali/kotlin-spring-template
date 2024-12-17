@@ -1,4 +1,8 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: testpassword
   jpa:
     hibernate:
       ddl-auto: create
@@ -9,8 +13,8 @@ management:
   endpoints:
     web:
       exposure:
-        exclude: '*'
+        include: '*'
   endpoint:
     health:
-      enabled: true
       show-details: always
+      access: read_only
